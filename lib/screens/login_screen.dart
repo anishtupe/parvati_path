@@ -1,15 +1,35 @@
 import 'package:flutter/material.dart';
+import 'package:parvati_path/widgets/custom_scaffold.dart';
 
-class _loginscreen extends StatefulWidget {
-  const _loginscreen({super.key});
+class login_screen extends StatefulWidget {
+  const login_screen({super.key});
 
   @override
-  State<_loginscreen> createState() => __loginscreenState();
+  State<login_screen> createState() => _login_screenState();
 }
 
-class __loginscreenState extends State<_loginscreen> {
+class _login_screenState extends State<login_screen> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return customscaffold(
+        child: SingleChildScrollView(
+      child: Padding(
+        padding: EdgeInsets.fromLTRB(
+            20, MediaQuery.of(context).size.height * 0.2, 20, 0),
+        child: Container(
+          padding: const EdgeInsets.all(20.0),
+          decoration: BoxDecoration(
+              color: Color.fromARGB(255, 255, 255, 255).withOpacity(1),
+              borderRadius: BorderRadius.circular(30.0),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.2),
+                  spreadRadius: 2,
+                  blurRadius: 2,
+                )
+              ]),
+        ),
+      ),
+    ));
   }
 }
