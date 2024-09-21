@@ -19,10 +19,10 @@ Container firebasebutton(BuildContext context, String title, Function ontap) {
       style: ButtonStyle(
           backgroundColor: MaterialStateProperty.resolveWith((states) {
             if (states.contains(MaterialState.pressed)) {
-              return Colors.black.withOpacity(0.6);
+              return Color.fromARGB(255, 28, 27, 27).withOpacity(0.6);
             }
 
-            return Color.fromARGB(109, 30, 1, 56).withOpacity(0.8);
+            return Color.fromARGB(255, 36, 36, 36).withOpacity(0.8);
           }),
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)))),
